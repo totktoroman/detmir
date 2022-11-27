@@ -13,6 +13,7 @@
      <li><code>insert_hygiene_care</code> Добавление в таблицу hygiene_care </li>
      <li><code>hygiene_care</code> Функция для сбора информации по категориям в "Гигиена и уход" </li>
      <li><code>response_product_hc</code> Функция для сбора информации по продуктам в подкатегориях </li>
+     <li><code>import_to_excel</code> Функция импорта таблиц в Excel </li>
 </ul>
 
 <b> Библиотеки для работы проекта </b>
