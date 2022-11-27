@@ -42,10 +42,10 @@ def nutrition_feeding():
         #Подкатегории (3 уровень)
         for j in i['categories']:
             print("    " + j['title'] + " " + j['id'])
-            response_product(j['id'], j['title'], i['title'], title_category_lvl1)
+            response_product_nf(j['id'], j['title'], i['title'], title_category_lvl1)
 
 #Функция для сбора информации по продуктам в подкатегориях
-def response_product(id, title_category_lvl3, title_category_lvl2, title_category_lvl1):
+def response_product_nf(id, title_category_lvl3, title_category_lvl2, title_category_lvl1):
     response_product = requests.get(
         'https://api.detmir.ru/v2/products?filter=categories[].id:' + id + ';platform:web;priority_stores[].id:%2C1063;promo:false;site:detmir;withregion:RU-BU&expand=meta.facet.ages.adults,meta.facet.gender.adults,webp&meta=*&limit=100&offset=0&sort=forinstore_price:asc',
         headers=headers)
@@ -110,10 +110,10 @@ def hygiene_care():
         #Подкатегории (3 уровень)
         for j in i['categories']:
             print("    " + j['title'] + " " + j['id'])
-            response_product(j['id'], j['title'], i['title'], title_category_lvl1)
+            response_product_hc(j['id'], j['title'], i['title'], title_category_lvl1)
 
 #Функция для сбора информации по продуктам в подкатегориях
-def response_product(id, title_category_lvl3, title_category_lvl2, title_category_lvl1):
+def response_product_hc(id, title_category_lvl3, title_category_lvl2, title_category_lvl1):
     response_product = requests.get(
         'https://api.detmir.ru/v2/products?filter=categories[].id:' + id + ';platform:web;priority_stores[].id:%2C1063;promo:false;site:detmir;withregion:RU-BU&expand=meta.facet.ages.adults,meta.facet.gender.adults,webp&meta=*&limit=100&offset=0&sort=forinstore_price:asc',
         headers=headers)
