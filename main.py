@@ -1,13 +1,17 @@
 import requests
 import sqlite3
 import pandas
+import time
 
 connect = sqlite3.connect("Detmir.db")
 cursor = connect.cursor()
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+}
 
-def createtable_nutrition_feeding():
-    cursor.execute("""CREATE TABLE IF NOT EXISTS nutrition_feeding(
+def createtable_products():
+    cursor.execute("""CREATE TABLE IF NOT EXISTS products(
         product_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         product_category_lvl1 TEXT,
         product_category_lvl2 TEXT,
@@ -20,14 +24,16 @@ def createtable_nutrition_feeding():
     """)
     connect.commit()
 def insert_nutrition_feeding(product_info):
-    sql = """   INSERT INTO nutrition_feeding (product_category_lvl1, product_category_lvl2, product_category_lvl3, product_title, product_price, product_old_price, product_code) 
+    sql = """   INSERT INTO products (product_category_lvl1, product_category_lvl2, product_category_lvl3, product_title, product_price, product_old_price, product_code) 
                 VALUES (?, ?, ?, ?, ?, ?, ?)  """
     cursor.execute(sql, product_info)
     connect.commit()
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
-}
+def insert_hygiene_care(product_info):
+    sql = """   INSERT INTO products (product_category_lvl1, product_category_lvl2, product_category_lvl3, product_title, product_price, product_old_price, product_code) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)  """
+    cursor.execute(sql, product_info)
+    connect.commit()
 
 #Функция для сбора информации по категориям в "Питание и кормление"
 def nutrition_feeding():
@@ -73,29 +79,8 @@ def response_product_nf(id, title_category_lvl3, title_category_lvl2, title_cate
             insert_nutrition_feeding(product_info)
         if (available == False):
             break
+        time.sleep(2)
 
-def createtable_hygiene_care():
-    cursor.execute("""CREATE TABLE IF NOT EXISTS hygiene_care(
-        product_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-        product_category_lvl1 TEXT,
-        product_category_lvl2 TEXT,
-        product_category_lvl3 TEXT,
-        product_title TEXT,
-        product_price DOUBLE,
-        product_old_price DOUBLE,
-        product_code INTEGER
-    )
-    """)
-    connect.commit()
-def insert_hygiene_care(product_info):
-    sql = """   INSERT INTO hygiene_care (product_category_lvl1, product_category_lvl2, product_category_lvl3, product_title, product_price, product_old_price, product_code) 
-                VALUES (?, ?, ?, ?, ?, ?, ?)  """
-    cursor.execute(sql, product_info)
-    connect.commit()
-
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
-}
 
 #Функция для сбора информации по категориям в "Гигиена и уход"
 def hygiene_care():
@@ -141,18 +126,20 @@ def response_product_hc(id, title_category_lvl3, title_category_lvl2, title_cate
             insert_hygiene_care(product_info)
         if (available == False):
             break
-def import_to_excel():
-    print ("Выберете таблицу из которой требуется выгрузить данные: " + '\n' +
-           "1) Питание и кормление" + '\n' +
-           "2) Гигиена и уход" )
-    choice = int(input("Введите '1' или '2': " + '\n'))
-    if (choice == 1):
-        df = pandas.read_sql(
-            "select product_category_lvl1 as 'Основная категория', product_category_lvl2 as 'Подкатегория', product_category_lvl3 as 'Подкатегория', product_title as 'Наименование', product_price as 'Цена по акции', product_old_price as 'Цена', product_code as 'Код товара' from nutrition_feeding ", connect)
-        df.to_excel(r'D:\Programs\JetBrains\PyCharm\PycharmProjects\detmir\nutrition_feeding.xlsx', index=False)
-    elif (choice == 2):
-        df = pandas.read_sql(
-            "select product_category_lvl1 as 'Основная категория', product_category_lvl2 as 'Подкатегория', product_category_lvl3 as 'Подкатегория', product_title as 'Наименование', product_price as 'Цена по акции', product_old_price as 'Цена', product_code as 'Код товара' from hygiene_care ", connect)
-        df.to_excel(r'D:\Programs\JetBrains\PyCharm\PycharmProjects\detmir\hygiene_care.xlsx', index=False)
+        time.sleep(2)
 
+def import_to_excel():
+
+    df = pandas.read_sql(
+        "select product_category_lvl1 as 'Основная категория', product_category_lvl2 as 'Подкатегория', product_category_lvl3 as 'Подкатегория', product_title as 'Наименование', product_price as 'Цена по акции', product_old_price as 'Цена', product_code as 'Код товара' from products ", connect)
+    df.to_excel(r"D:\Excel detmir\detmir.xlsx", index=False)
+    sql_delete_query = """ DELETE FROM products"""
+    cursor.execute(sql_delete_query)
+    connect.commit()
+    print ("Таблица в базе данных успешно очищена")
+
+#createtable_products()
+
+nutrition_feeding()
+hygiene_care()
 import_to_excel()
