@@ -1,0 +1,58 @@
+2022-12-06 12:19:54,739 INFO The parser is running
+2022-12-06 12:19:54,739 INFO CATEGORY ПИТАНИЕ И КОРМЛЕНИЕ
+2022-12-06 12:20:17,221 INFO Parsing products from the category:   Детское питание  subcategory:  Пюре
+2022-12-06 12:20:27,154 INFO Parsing products from the category:   Детское питание  subcategory:  Чай детский
+2022-12-06 12:20:28,500 INFO Parsing products from the category:   Детское питание  subcategory:  Соки, воды, компоты и морсы
+2022-12-06 12:20:33,205 INFO Parsing products from the category:   Детское питание  subcategory:  Бакалея
+2022-12-06 12:20:36,822 INFO Parsing products from the category:   Детское питание  subcategory:  Смеси и заменители молока
+2022-12-06 12:20:48,440 INFO Parsing products from the category:   Детское питание  subcategory:  Каши
+2022-12-06 12:20:58,816 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Детский творожок
+2022-12-06 12:21:00,096 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Десерты
+2022-12-06 12:21:01,610 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Кисломолочные продукты
+2022-12-06 12:21:02,098 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Молоко детское
+2022-12-06 12:21:04,895 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Йогурты
+2022-12-06 12:21:07,211 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Продукты на козьем молоке
+2022-12-06 12:21:09,667 INFO Parsing products from the category:   Молочные продукты без заменителя молочного жира  subcategory:  Готовые молочные и кисломолочные смеси
+2022-12-06 12:21:12,014 INFO Parsing products from the category:   Сладости  subcategory:  Снеки
+2022-12-06 12:21:14,976 INFO Parsing products from the category:   Сладости  subcategory:  Газированные напитки
+2022-12-06 12:21:17,228 INFO Parsing products from the category:   Сладости  subcategory:  Шоколад
+2022-12-06 12:21:19,632 INFO Parsing products from the category:   Сладости  subcategory:  Зефир
+2022-12-06 12:21:21,979 INFO Parsing products from the category:   Сладости  subcategory:  Жевательные резинки
+2022-12-06 12:21:23,967 INFO Parsing products from the category:   Сладости  subcategory:  Мармелад
+2022-12-06 12:21:26,708 INFO Parsing products from the category:   Сладости  subcategory:  Карамель
+2022-12-06 12:21:29,567 INFO Parsing products from the category:   Сладости  subcategory:  Сюрпризы шоколадные
+2022-12-06 12:21:32,586 INFO Parsing products from the category:   Сладости  subcategory:  Батончики мюсли
+2022-12-06 12:21:35,458 INFO Parsing products from the category:   Сладости  subcategory:  Витамины и гематоген
+2022-12-06 12:21:38,333 INFO Parsing products from the category:   Сладости  subcategory:  Наборы подарочные
+2022-12-06 12:21:41,713 INFO Parsing products from the category:   Детская посуда и столовые приборы  subcategory:  Детские кружки
+2022-12-06 12:21:44,696 INFO Parsing products from the category:   Детская посуда и столовые приборы  subcategory:  Детские тарелки
+2022-12-06 12:21:47,936 INFO Parsing products from the category:   Детская посуда и столовые приборы  subcategory:  Детские столовые приборы
+2022-12-06 12:21:51,270 INFO Parsing products from the category:   Детская посуда и столовые приборы  subcategory:  Наборы детской посуды
+2022-12-06 12:21:55,550 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Ниблеры и насадки
+2022-12-06 12:21:59,313 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Слюнявчики
+2022-12-06 12:22:01,850 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Аксессуары для кормления
+2022-12-06 12:22:05,374 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Щетки и ершики
+2022-12-06 12:22:07,284 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Сменные аксессуары к поильникам
+2022-12-06 12:22:10,019 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Детские бутылочки
+2022-12-06 12:22:14,472 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Поильники
+2022-12-06 12:22:18,495 INFO Parsing products from the category:   Аксессуары и средства для кормления  subcategory:  Детская посуда и столовые приборы
+2022-12-06 12:22:21,095 INFO Parsing products from the category:   Бутылочки и поильники  subcategory:  Детские бутылочки
+2022-12-06 12:22:24,181 INFO Parsing products from the category:   Бутылочки и поильники  subcategory:  Поильники
+2022-12-06 12:22:26,938 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Подогреватели
+2022-12-06 12:22:30,456 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Приготовление пищи
+2022-12-06 12:22:33,203 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Молокоотсосы
+2022-12-06 12:22:35,862 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Пакеты и контейнеры для хранения молока
+2022-12-06 12:22:37,515 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Машина для приготовления детской смеси
+2022-12-06 12:22:38,769 INFO Parsing products from the category:   Молокоотсосы и бытовая техника  subcategory:  Стерилизаторы
+2022-12-06 12:22:41,416 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Бакалея
+2022-12-06 12:22:45,458 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Консервация
+2022-12-06 12:22:49,198 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Кондитерские изделия
+2022-12-06 12:22:52,848 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Снеки и орехи
+2022-12-06 12:22:55,634 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Напитки
+2022-12-06 12:22:58,720 INFO Parsing products from the category:   Продукты для всей семьи  subcategory:  Чай/кофе/какао
+2022-12-06 12:23:01,935 INFO Parsing products from the category:   Питание для мам  subcategory:  Смеси для кормящих и беременных
+2022-12-06 12:23:04,420 INFO Parsing products from the category:   Питание для мам  subcategory:  Чай для кормящих и беременных
+2022-12-06 12:23:07,137 INFO Parsing products from the category:   БАДы  subcategory:  Витамины
+2022-12-06 12:23:52,038 INFO Parsing products from the category:   БАДы  subcategory:  Витамины для детей
+2022-12-06 12:24:12,414 ERROR Error connecting to the page
+2022-12-06 12:24:12,415 ERROR ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
